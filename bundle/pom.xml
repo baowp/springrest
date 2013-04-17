@@ -23,6 +23,10 @@
 		</dependency>
 		<dependency>
 			<groupId>com.iteye.baowp.springrest.app</groupId>
+			<artifactId>springrest.biz</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.iteye.baowp.springrest.app</groupId>
 			<artifactId>springrest.web</artifactId>
 		</dependency>
 	</dependencies>
