@@ -1,5 +1,7 @@
 package com.iteye.baowp.springrest.service;
 
-public interface CityService {
+import com.iteye.baowp.springrest.models.City;
+
+public interface CityService extends Service<City> {
 
 }
