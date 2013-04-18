@@ -15,5 +15,10 @@
 <div>
 	${spel['T(com.iteye.baowp.springrest.constant.Constant).str']}
 </div>
+<div>
+	<c:forEach items="${cities}" var="city">
+		${city.name }
+	</c:forEach>
+</div>
 </body>
 </html>

@@ -2,19 +2,26 @@ package com.iteye.baowp.springrest.controller;
 
 import java.io.PrintWriter;
 import java.util.Date;
+import java.util.List;
 
 import javax.servlet.AsyncContext;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.iteye.baowp.springrest.models.City;
+import com.iteye.baowp.springrest.service.CityService;
 
 @SuppressWarnings("serial")
 @Controller
 @Scope("prototype")
 @RequestMapping("/sample")
 public class JavaController extends BaseController {
+	@Autowired
+	private CityService cityService;
 
 	@RequestMapping(value = "/java")
 	public String action() {
@@ -22,6 +29,8 @@ public class JavaController extends BaseController {
 		deposit("message", message);
 		deposit(message, "message");
 		deposit("n", 2);
+		List<City> cityList = cityService.loadAll();
+		deposit("cities", cityList);
 		return "groovy/list";
 	}
 
