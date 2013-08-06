@@ -20,4 +20,10 @@ public class SampleAspect {
 		commService.print();
 	}
 
+	// @Before("execution(* com.iteye.baowp.springrest.controller..*.*(..))")
+	@Before("execution(* com.iteye.baowp.springrest.service.impl.CityServiceImpl.*(..))")
+	public void sample2() {
+		System.out.println("sample server aspect");
+		commService.print();
+	}
 }
